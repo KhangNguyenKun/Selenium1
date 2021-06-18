@@ -2,6 +2,7 @@ package TestCases.Railway;
 
 import Common.Constant;
 import Common.ExcelUtils;
+import PageObject.Railway.BookTicketPage;
 import PageObject.Railway.HomePage;
 import PageObject.Railway.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -13,67 +14,108 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-public class LoginTest {
+public class LoginTest extends BaseTest {
 
     private String sTestCaseName;
 
     private int iTestCaseRow;
-    @BeforeMethod
-    public void beforeMethod(){
-        System.out.println("Pre-condition");
-//        System.setProperty("webdriver.chrome.driver", Utilities.getPro())
-        WebDriverManager.chromedriver().setup();
-        Constant.WEBDRIVER = new ChromeDriver();
 
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
+    private HomePage homePage = new HomePage();
 
-//    @AfterMethod
-//    public void afterMethod(){
-//        System.out.println("Post- condition");
-//        Constant.WEBDRIVER.quit();
-//    }
+    private LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "Authentication")
-    public void TC01(String sUserName, String sPassword){
-        System.out.println("TC01-user can log into Railway with invalid user name and password");
-        HomePage homePage = new HomePage();
+    @Test
+    public void TC01(){
+        System.out.println("TC01-user can log into Railway with valid user name and password");
+
         homePage.open();
 
-        LoginPage loginPage= homePage.gotoLoginPage();
+        homePage.gotoLoginPage();
 
 
-        String actualMsg= loginPage.login(sUserName, sPassword).getWelcomeMessage();
-        String expectedMsg = "Welcome " + sUserName;
+        String actualMsg= loginPage.login(Constant.USERNAME, Constant.PASSWORD).getWelcomeMessage();
+        String expectedMsg = "Welcome " + Constant.USERNAME;
          Assert.assertEquals(actualMsg, expectedMsg, "Welcome message is not display as expected");
      }
 
-     @AfterMethod
-     public void afterMethod() {
 
-         Constant.WEBDRIVER.close();
+    @Test
+    public void TC02(){
+        System.out.println("TC02-User can't login with blank Username text box");
 
-     }
+
+        homePage.open();
+
+        homePage.gotoLoginPage();
+
+        String actualMsg= loginPage.login("", Constant.PASSWORD).getErrorMessage();
+        String expectedMsgBlankTextBox = "There was a problem with your login and/or errors exist in your form.";
+        Assert.assertEquals(actualMsg, expectedMsgBlankTextBox, "Welcome message is not display as expected");
+
+    }
+
+
+    @Test
+    public void TC03(){
+        System.out.println("TC03-User can't login with invalid password");
+
+        homePage.open();
+
+        BookTicketPage bookTicketPage = new BookTicketPage();
+
+
+        bookTicketPage.gotoBookTicket();
+        homePage.gotoLoginPage();
+
+        String actualMsg = loginPage.login(Constant.USERNAME, Constant.INVALID_PASSWORD).getErrorMessage();
+        String expectedInvalidPass = "There was a problem with your login and/or errors exist in your form.";
+
+        Assert.assertNotSame(actualMsg, expectedInvalidPass,"Welcome message is not display as expected");
+    }
+
+    @Test
+    public void TC04(){
+        System.out.println("TC04-Login page displays when un-logged User clicks on Book ticket tab");
+
+        homePage.open();
+
+        BookTicketPage bookTicketPage = new BookTicketPage();
+
+
+        BookTicketPage actualMsg= bookTicketPage.gotoBookTicket();
+        LoginPage expectedMsg= homePage.gotoLoginPage();
+
+        Assert.assertNotSame(actualMsg, expectedMsg,   "Welcome message is not display as expected");
+    }
+
+
+    @Test(dataProvider = "Authentication")
+    public void TC05(String userName, String password){
+        System.out.println("TC05-System shows message when user enters wrong password several times");
+
+        homePage.open();
+
+        BookTicketPage bookTicketPage = new BookTicketPage();
+
+
+        bookTicketPage.gotoBookTicket();
+        homePage.gotoLoginPage();
+
+        String actualMsg = loginPage.login(userName, password).getErrorMessage();
+        String expectedMsgSeveralTimes = "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.";
+        Assert.assertNotSame(actualMsg, expectedMsgSeveralTimes ,"Welcome message is not display as expected");
+    }
 
     @DataProvider(name = "Authentication")
 
     public Object[][] Authentication() throws Exception{
 
-        // Setting up the Test Data Excel file
-
         ExcelUtils.setExcelFile("D://selenium_folder//src//main//java//DataObjects//loginAccount.xlsx","Sheet2");
 
         sTestCaseName = this.toString();
 
-        // From above method we get long test case name including package and class name etc.
-
-        // The below method will refine your test case name, exactly the name use have used
-
         sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
 
-        // Fetching the Test Case row number from the Test Data Sheet
-
-        // Getting the Test Case name to get the TestCase row from the Test Data Excel sheet
 
         iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
 
@@ -83,6 +125,26 @@ public class LoginTest {
         return (testObjArray);
 
     }
+//
+//    @DataProvider(name = "Authentication_2")
+//
+//    public Object[][] Authentication_2() throws Exception{
+//
+//        ExcelUtils.setExcelFile("D:\\Selenium1\\selenium_1\\src\\main\\java\\DataObjects\\loginAccount.xlsx","Sheet2");
+//
+//        sTestCaseName = this.toString();
+//
+//        sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
+//
+//
+//        iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
+//
+//        Object[][] testObjArray = ExcelUtils.getTableArray("D:\\Selenium1\\selenium_1\\src\\main\\java\\DataObjects\\loginAccount.xlsx"
+//                ,"Sheet2",iTestCaseRow);
+//
+//        return (testObjArray);
+//
+//    }
 
 
 }

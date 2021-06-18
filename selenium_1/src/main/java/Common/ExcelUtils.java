@@ -172,7 +172,7 @@ public class ExcelUtils {
 
             // you can write a function as well to get Column count
 
-            int totalCols = 2;
+            int totalCols =2;
 
             tabArray=new String[totalRows][totalCols];
 
@@ -181,6 +181,7 @@ public class ExcelUtils {
             for (int i=startRow;i<=totalRows;i++, ci++) {
 
                 cj=0;
+//                 totalCols = ExcelWSheet.getRow(i).getLastCellNum();
 
                 for (int j=startCol;j<=totalCols;j++, cj++){
 

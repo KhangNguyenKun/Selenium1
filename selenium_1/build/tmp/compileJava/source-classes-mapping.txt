@@ -1,34 +1,44 @@
-TestCases/Railway/LoginTest.java
- TestCases.Railway.LoginTest
-Common/ExcelUtils.java
- Common.ExcelUtils
 TestCases/Railway/DeleteTicketTest.java
  TestCases.Railway.DeleteTicketTest
+TestCases/Railway/BookTicketFromTimeTable.java
+ TestCases.Railway.BookTicketFromTimeTable
+TestCases/Railway/CreateANewAccount.java
+ TestCases.Railway.CreateANewAccount
 Common/Constant.java
  Common.Constant
 Common/Utilities.java
  Common.Utilities
+TestCases/Railway/BaseTest.java
+ TestCases.Railway.BaseTest
+TestCases/Railway/LoginTest.java
+ TestCases.Railway.LoginTest
 TestCases/Railway/BookTicketTest.java
  TestCases.Railway.BookTicketTest
+Common/ExcelUtils.java
+ Common.ExcelUtils
 PageObject/Railway/RegisterPage.java
  PageObject.Railway.RegisterPage
 PageObject/Railway/BookTicketPage.java
  PageObject.Railway.BookTicketPage
 PageObject/Railway/TimeTablePage.java
  PageObject.Railway.TimeTablePage
-TestCases/Railway/BookTicketFromTimeTable.java
- TestCases.Railway.BookTicketFromTimeTable
 PageObject/Railway/GeneralPage.java
  PageObject.Railway.GeneralPage
 PageObject/Railway/LoginPage.java
  PageObject.Railway.LoginPage
+PageObject/Railway/ForgotPasswordPage.java
+ PageObject.Railway.ForgotPasswordPage
 PageObject/Railway/TicketPricePage.java
  PageObject.Railway.TicketPricePage
 PageObject/Railway/HomePage.java
  PageObject.Railway.HomePage
 PageObject/Railway/ContactPage.java
  PageObject.Railway.ContactPage
+TestCases/Railway/ChangePasswordTest.java
+ TestCases.Railway.ChangePasswordTest
 PageObject/Railway/MyTicketPage.java
  PageObject.Railway.MyTicketPage
 PageObject/Railway/ChangePasswordPage.java
  PageObject.Railway.ChangePasswordPage
+PageObject/Railway/TrainPriceListPage.java
+ PageObject.Railway.TrainPriceListPage

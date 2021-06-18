@@ -40,22 +40,7 @@ public class MyTicketPage extends GeneralPage{
 
             Constant.WEBDRIVER.switchTo().alert().accept();
 
-//        } catch (UnhandledAlertException f) {
-//            try {
-//                WebDriverWait wait = new WebDriverWait( Constant.WEBDRIVER, 2);
-//                wait.until(ExpectedConditions.alertIsPresent());
-//                Alert alert =  Constant.WEBDRIVER.switchTo().alert();
-//                String alertText = alert.getText();
-//                System.out.println("Alert data: " + alertText);
-//                alert.accept();
-//            } catch (NoAlertPresentException e) {
-//                e.printStackTrace();
-//            }
-//        }
 
-
-//       Actions actions = new Actions(Constant.WEBDRIVER);
-//       actions.sendKeys(Keys.ENTER);
               return new HomePage();
     }
 
