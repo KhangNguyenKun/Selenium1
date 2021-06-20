@@ -10,7 +10,7 @@ public class Constant {
     public static final String NEW_PASSWORD = "123456789";
     public static final String CONFIRM_PASSWORD = "123456789";
     public static final String INVALID_PASSWORD = "123456754589";
-    public static final String DATEBOOK = "6/22/2021";
+    public static final String DATEBOOK = "6/30/2021";
     public static final String DEPART_FROM = "Huế";
     public static final String ARRIVE_AT = "Quảng Ngãi";
     public static final String SEAT_TYPE = "Soft bed";

@@ -88,7 +88,7 @@ public class GeneralPage {
     }
 
     public int checkExistTicket(String departFrom, String arriveAt, String seatType, String departDate,
-                                   String bookDate, String amount ){
+                                    String amount ){
         int size = Constant.WEBDRIVER.findElements(By.xpath("//td[.='Huế']/following-sibling::td[.='Quảng Ngãi']/following-sibling::td[.='Soft bed']/following-sibling::td[.='6/22/2021']/following-sibling::td[.='2']")).size();
 
         return size;

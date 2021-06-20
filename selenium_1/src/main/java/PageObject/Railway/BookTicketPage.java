@@ -22,6 +22,7 @@ public class BookTicketPage extends GeneralPage  {
     public HomePage bookTicket(String date, String departFrom, String arriveAt, String seatType,
                                String amount) throws InterruptedException {
 
+
         Select select = new Select(Constant.WEBDRIVER.findElement(departDate));
         select.selectByVisibleText(date);
 
