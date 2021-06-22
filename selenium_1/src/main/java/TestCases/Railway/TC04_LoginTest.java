@@ -19,11 +19,9 @@ public class TC04_LoginTest extends BaseTest{
         test.info("2. Click on BookTicket tab");
         BookTicketPage bookTicketPage = new BookTicketPage();
 
-
         BookTicketPage actualMsg= bookTicketPage.gotoBookTicket();
         LoginPage expectedMsg= homePage.gotoLoginPage();
 
         Assert.assertNotEquals(actualMsg, expectedMsg);
-
     }
 }

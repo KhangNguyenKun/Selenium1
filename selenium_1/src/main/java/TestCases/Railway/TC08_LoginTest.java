@@ -1,7 +1,5 @@
 package TestCases.Railway;
 
-import Common.Constant;
-import PageObject.Railway.GeneralPage;
 import PageObject.Railway.HomePage;
 import PageObject.Railway.LoginPage;
 import com.aventstack.extentreports.Status;

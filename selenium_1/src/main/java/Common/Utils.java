@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
+import java.util.Date;
+
 public class Utils {
     public static void scrollIntoView(String xpath){
         WebElement element = Constant.WEBDRIVER.findElement
@@ -18,5 +20,9 @@ public class Utils {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+    public static Date time(){
+        Date date = new Date();
+        return date;
     }
 }

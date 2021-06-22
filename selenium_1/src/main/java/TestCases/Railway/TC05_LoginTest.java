@@ -21,12 +21,6 @@ public class TC05_LoginTest extends BaseTest {
 
     @Test(dataProvider = "Authentication")
     public void TC05(String userName, String password) {
-//        1. Navigate to QA Railway Website
-//        2. Click on "Login" tab
-//        3. Enter valid information into "Username" textbox except "Password" textbox.
-//        4. Click on "Login" button
-//        5. Repeat step 3 three more times.
-
         test = extent.createTest("TC05", "System shows message when user enters wrong password several times");
 
         test.info("1. Navigate to QA Railway Website");

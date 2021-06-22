@@ -4,11 +4,6 @@ import Common.Constant;
 import PageObject.Railway.ChangePasswordPage;
 import PageObject.Railway.HomePage;
 import PageObject.Railway.LoginPage;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.relevantcodes.extentreports.LogStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,12 +14,6 @@ public class TC09_ChangePasswordTest extends BaseTest{
 
     @Test
     public void TC09(){
-//        1. Navigate to QA Railway Website
-//        2. Login with valid account
-//        3. Click on "Change Password" tab
-//        4. Enter valid value into all fields.
-//        5. Click on "Change Password" button
-
         test = extent.createTest("TC09", "User can change password");
         System.out.println("User can change password");
         homePage.open();

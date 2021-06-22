@@ -1,16 +1,11 @@
 package TestCases.Railway;
 
 import Common.Constant;
-
 import PageObject.Railway.BookTicketPage;
 import PageObject.Railway.HomePage;
-
-
 import PageObject.Railway.LoginPage;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
-import org.testng.Assert;
-
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -34,9 +29,7 @@ public class TC14_BookTicketTest extends BaseTest {
         test.info("8. Click on \"Book ticket\" button");
         String actual = bookTicket.bookTicket(Constant.DATEBOOK, Constant.DEPART_FROM,
                 Constant.ARRIVE_AT, Constant.SEAT_TYPE, Constant.TICKET_AMOUNT).getSuccessBookTicket();
-
         String expected = "Ticket Booked Successfully!";
-
         try {
             SoftAssert softAssert = new SoftAssert();
             softAssert.assertEquals(actual, expected, "Message is not display as expected");
@@ -52,7 +45,6 @@ public class TC14_BookTicketTest extends BaseTest {
             softAssert.assertEquals(actualAmount, Constant.TICKET_AMOUNT);
             softAssert.assertAll();
             test.log(Status.PASS, " Ticket book successfully ");
-
         } catch (Exception e) {
             test.log(Status.PASS, "Fail");
         }

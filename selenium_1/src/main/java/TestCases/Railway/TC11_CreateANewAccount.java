@@ -28,14 +28,13 @@ public class TC11_CreateANewAccount extends BaseTest{
         String actual = registerPage.register(Constant.EMAIL_REGISTER,"", "",
                 "").getRegisterFailure();
 
-//        Utils.scrollIntoView("//input[@value='Register']");
-
         String expected = "There're errors in the form. Please correct the errors and try again.";
         Assert.assertEquals(actual, expected);
 
         //Scroll to bottom of page
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
         String actualPassLength = registerPage.getInvalidPassLength();
         String expectedPassLength = "Invalid password length";
         Assert.assertEquals(actualPassLength, expectedPassLength);

@@ -1,33 +1,33 @@
 PageObject/Railway/LoginPage.java
  PageObject.Railway.LoginPage
-Common/Utilities.java
- Common.Utilities
-PageObject/Railway/MyTicketPage.java
- PageObject.Railway.MyTicketPage
-Common/ExcelUtils.java
- Common.ExcelUtils
-PageObject/Railway/ContactPage.java
- PageObject.Railway.ContactPage
-PageObject/Railway/TicketPricePage.java
- PageObject.Railway.TicketPricePage
-PageObject/Railway/TimeTablePage.java
- PageObject.Railway.TimeTablePage
-PageObject/Railway/RegisterPage.java
- PageObject.Railway.RegisterPage
 PageObject/Railway/HomePage.java
  PageObject.Railway.HomePage
-PageObject/Railway/ChangePasswordPage.java
- PageObject.Railway.ChangePasswordPage
-PageObject/Railway/TrainPriceListPage.java
- PageObject.Railway.TrainPriceListPage
-PageObject/Railway/ForgotPasswordPage.java
- PageObject.Railway.ForgotPasswordPage
+PageObject/Railway/TicketPricePage.java
+ PageObject.Railway.TicketPricePage
+Common/ExcelUtils.java
+ Common.ExcelUtils
 PageObject/Railway/BookTicketPage.java
  PageObject.Railway.BookTicketPage
-Common/Constant.java
- Common.Constant
+Common/Utilities.java
+ Common.Utilities
+PageObject/Railway/RegisterPage.java
+ PageObject.Railway.RegisterPage
+PageObject/Railway/TrainPriceListPage.java
+ PageObject.Railway.TrainPriceListPage
+PageObject/Railway/MyTicketPage.java
+ PageObject.Railway.MyTicketPage
+PageObject/Railway/ChangePasswordPage.java
+ PageObject.Railway.ChangePasswordPage
+PageObject/Railway/ContactPage.java
+ PageObject.Railway.ContactPage
+PageObject/Railway/TimeTablePage.java
+ PageObject.Railway.TimeTablePage
 PageObject/Railway/GeneralPage.java
  PageObject.Railway.GeneralPage
+Common/Constant.java
+ Common.Constant
+PageObject/Railway/ForgotPasswordPage.java
+ PageObject.Railway.ForgotPasswordPage
 Common/Utils.java
  Common.Utils
 TestCases/Railway/TC09_ChangePasswordTest.java
