@@ -1,84 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+<!--    <parameter name="browser" value="Chrome" />-->
+<!--    <parameter name="browser" value="FireFox" />-->
+    <parameter name="browser" value="Edge" />
     <test verbose="2" preserve-order="true" name="D:/Selenium1/selenium_1">
         <classes>
-            <class name="TestCases.Railway.BookTicketFromTimeTable_TC15">
+            <class name="TestCases.Railway.TC01_LoginTest">
                 <methods>
-                    <include name="TC15"/>
+                    <include name="TC01"/>
                 </methods>
             </class>
-            <class name="TestCases.Railway.BookTicketTest_TC14">
+            <class name="TestCases.Railway.TC02_LoginTest">
                 <methods>
-                    <include name="Tc03"/>
+                    <include name="TC02"/>
                 </methods>
             </class>
-            <class name="TestCases.Railway.ChangePasswordTest_TC09">
+            <class name="TestCases.Railway.TC03_LoginTest">
                 <methods>
-                    <include name="TC09"/>
-                    <include name="TC13"/>
+                    <include name="TC03"/>
                 </methods>
             </class>
-            <class name="TestCases.Railway.CreateANewAccount_TC07">
+            <class name="TestCases.Railway.TC04_LoginTest">
+                <methods>
+                    <include name="TC04"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC05_LoginTest">
+                <methods>
+                    <include name="TC05"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC07_CreateANewAccount">
                 <methods>
                     <include name="TC07"/>
                 </methods>
             </class>
-            <class name="TestCases.Railway.DeleteTicketTest_TC16">
+            <class name="TestCases.Railway.TC08_LoginTest">
+                <methods>
+                    <include name="TC08"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC09_ChangePasswordTest">
+                <methods>
+                    <include name="TC09"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC10_CreateANewAccount">
+                <methods>
+                    <include name="TC10"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC11_CreateANewAccount">
+                <methods>
+                    <include name="TC11"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC12_ForgotPasswordTest">
+                <methods>
+                    <include name="TC12"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC13_ChangePasswordTest">
+                <methods>
+                    <include name="TC13"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC14_BookTicketTest">
+                <methods>
+                    <include name="TC14"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC15_BookTicketFromTimeTable">
+                <methods>
+                    <include name="TC15"/>
+                </methods>
+            </class>
+            <class name="TestCases.Railway.TC16_DeleteTicketTest">
                 <methods>
                     <include name="TC16"/>
                 </methods>
             </class>
-            <class name="TestCases.Railway.LoginTest_TC05">
-                <methods>
-                    <include name="TC01"/>
-                    <include name="TC02"/>
-                    <include name="TC03"/>
-                    <include name="TC04"/>
-                    <include name="TC05"/>
-                </methods>
-            </class>
         </classes>
-    </test>
-    <test name="ChromeTest">
-
-        <parameter name="browser" value="Chrome" />
-
-        <classes>
-
-            <class name="parallelTest.CrossBrowserScript">
-
-            </class>
-
-        </classes>
-
-    </test>
-
-    <test name="FirefoxTest">
-
-        <parameter name="browser" value="Firefox" />
-
-        <classes>
-
-            <class name="parallelTest.CrossBrowserScript">
-
-            </class>
-
-        </classes>
-
-    </test>
-
-    <test name="EdgeTest">
-
-        <parameter name="browser" value="Edge" />
-
-        <classes>
-
-            <class name="parallelTest.CrossBrowserScript">
-
-            </class>
-
-        </classes>
-
     </test>
 </suite>

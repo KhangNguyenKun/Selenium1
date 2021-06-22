@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TicketPricePage extends GeneralPage{
-//    private static By ticketFromTo = By.xpath("//tr[@class='TableSmallHeader']" +
-//            "//th[.='Ticket price from Sài Gòn to Phan Thiết']");
     private static By hardSeatBookTicket = By.xpath("//td[.='Hard seat']/following-sibling::td//a");
     private static By softSeatBookTicket = By.xpath("//td[.='Soft seat']/following-sibling::td//a");
     private static By softSeatWithAirConditionerBookTicket = By.xpath("//td[.='Soft seat with air conditioner']/following-sibling::td//a");

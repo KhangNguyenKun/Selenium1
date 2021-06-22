@@ -22,10 +22,13 @@ public class TimeTablePage extends GeneralPage{
         ((JavascriptExecutor) Constant.WEBDRIVER).executeScript("arguments[0].scrollIntoView(true);",
                 element);
         element.click();
-//        WebDriverWait wait2 = new WebDriverWait(Constant.WEBDRIVER, 10);
-//        wait2.until(ExpectedConditions.elementToBeClickable(Constant.WEBDRIVER.findElement
-//                (By.xpath("//td[.='"+ departStation +"']/following-sibling::td[.='"+
-//                        arriveAt + "']/following-sibling::td[4]//a"))));
         return new BookTicketPage();
+    }
+    public String checkTicketFromTimetable(){
+        WebElement element = Constant.WEBDRIVER.findElement
+                (By.xpath("//td[.='Huế']/following-sibling::td[.='Sài Gòn']/following-sibling::td[4]//a"));
+        ((JavascriptExecutor) Constant.WEBDRIVER).executeScript("arguments[0].scrollIntoView(true);",
+                element);
+        return element.getText();
     }
 }

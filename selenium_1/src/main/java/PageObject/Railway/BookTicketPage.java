@@ -1,11 +1,10 @@
 package PageObject.Railway;
 
 import Common.Constant;
+import Common.Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import java.util.concurrent.TimeUnit;
 
 public class BookTicketPage extends GeneralPage  {
 
@@ -20,22 +19,17 @@ public class BookTicketPage extends GeneralPage  {
         return Constant.WEBDRIVER.findElement(submit);
     }
     public HomePage bookTicket(String date, String departFrom, String arriveAt, String seatType,
-                               String amount) throws InterruptedException {
-
+                               String amount) {
 
         Select select = new Select(Constant.WEBDRIVER.findElement(departDate));
         select.selectByVisibleText(date);
 
         Select selectDepart = new Select(Constant.WEBDRIVER.findElement(departFrom1));
         selectDepart.selectByVisibleText(departFrom);
-
-//        Constant.WEBDRIVER.manage().window().maximize();
-//        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Thread.sleep(2000);
+        Utils.threadSleep();
 
         Select selectArrive = new Select(Constant.WEBDRIVER.findElement(arriveAt1));
         selectArrive.selectByVisibleText(arriveAt);
-
 
 
         Select selectSeat = new Select(Constant.WEBDRIVER.findElement(seatType1));

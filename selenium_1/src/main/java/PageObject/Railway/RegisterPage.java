@@ -1,7 +1,10 @@
 package PageObject.Railway;
 
 import Common.Constant;
+import Common.Utils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 public class RegisterPage extends GeneralPage{
     private static By emailP = By.xpath("//input[@id='email']");
@@ -15,8 +18,12 @@ public class RegisterPage extends GeneralPage{
         Constant.WEBDRIVER.findElement(passwordP).sendKeys(password);
         Constant.WEBDRIVER.findElement(confirmPasswordP).sendKeys(confirmPassword);
         Constant.WEBDRIVER.findElement(pidP).sendKeys(pid);
-        Constant.WEBDRIVER.findElement(register).click();
-
+        WebElement element = Constant.WEBDRIVER.findElement
+                (By.xpath("//input[@value='Register']"));
+        ((JavascriptExecutor) Constant.WEBDRIVER).
+                executeScript("arguments[0].scrollIntoView(true);",
+                        element);
+        element.click();
         return new HomePage();
     }
 }
