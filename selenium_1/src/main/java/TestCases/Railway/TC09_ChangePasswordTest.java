@@ -27,7 +27,7 @@ public class TC09_ChangePasswordTest extends BaseTest{
         test.info("3. Click on \"Change Password\" tab");
         test.info("4. Enter valid value into all fields.");
         test.info("5. Click on \"Change Password\" button");
-        homePage.goToChangePasswordTab();
+        homePage.goToChangePasswordPage();
         String actual = changePasswordPage.changePassword(System.getenv("PASSWORD"), Constant.NEW_PASSWORD, Constant.CONFIRM_PASSWORD)
                 .getChangePasswordSuccessMess();
         String expected=  "Your password has been updated!";

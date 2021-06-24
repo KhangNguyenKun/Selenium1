@@ -123,7 +123,7 @@ public class GeneralPage {
         return new RegisterPage();
     }
 
-    public ChangePasswordPage goToChangePasswordTab() {
+    public ChangePasswordPage goToChangePasswordPage() {
         this.getTabChangePassword().click();
         return new ChangePasswordPage();
     }
@@ -142,8 +142,9 @@ public class GeneralPage {
         return new LoginPage();
     }
 
-    public void gotoMyTicket() {
+    public MyTicketPage gotoMyTicket() {
         Constant.WEBDRIVER.findElement(tabMyTicket).click();
+        return new MyTicketPage();
 
     }
 

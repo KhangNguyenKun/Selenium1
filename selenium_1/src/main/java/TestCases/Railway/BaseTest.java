@@ -1,7 +1,6 @@
 package TestCases.Railway;
 
 import Common.Constant;
-import Common.Utils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -19,19 +18,25 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 public class BaseTest {
-    static ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./Reports/extent.html");
+//    static ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./Reports/extent.html");
     static ExtentReports extent = new ExtentReports();
     static ExtentTest test;
 
+    @BeforeSuite
+    public void extentReport(){
+        Date date = new Date();
+        String filePath = "./Reports/extent.html";
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(filePath);
+//        ExtentReports extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+    }
 
     @BeforeMethod
     @Parameters("browser")
-
     public static void startTest(String browser) throws Exception {
-        extent.attachReporter(htmlReporter);
-
 //        Check if parameter passed from TestNG is 'firefox'
         if (browser.equalsIgnoreCase("firefox")) {
             //create firefox instance

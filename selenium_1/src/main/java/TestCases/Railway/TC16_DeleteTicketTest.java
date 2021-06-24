@@ -39,11 +39,7 @@ public class TC16_DeleteTicketTest extends BaseTest {
         try
         {
             boolean isTrue = sizeAfter == size -1;
-            if (isTrue) {
                 test.log(Status.PASS, "Ticket is deleted");
-            } else {
-                test.log(Status.FAIL, "Ticket is not delete");
-            }
         }
         catch (Exception e){
             test.info(e);
