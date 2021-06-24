@@ -88,7 +88,7 @@ public class BaseTest {
         }
 
         extent.flush();
-        Constant.WEBDRIVER.close();
+//        Constant.WEBDRIVER.close();
 
     }
 

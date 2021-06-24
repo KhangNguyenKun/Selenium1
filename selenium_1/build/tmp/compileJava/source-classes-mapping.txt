@@ -1,66 +1,66 @@
-Common/Utils.java
- Common.Utils
+TestCases/Railway/TC15_BookTicketFromTimeTable.java
+ TestCases.Railway.TC15_BookTicketFromTimeTable
 Common/Utilities.java
  Common.Utilities
-Common/Constant.java
- Common.Constant
+TestCases/Railway/TC04_LoginTest.java
+ TestCases.Railway.TC04_LoginTest
 Common/ExcelUtils.java
  Common.ExcelUtils
-PageObject/Railway/LoginPage.java
- PageObject.Railway.LoginPage
-PageObject/Railway/HomePage.java
- PageObject.Railway.HomePage
-PageObject/Railway/ContactPage.java
- PageObject.Railway.ContactPage
-PageObject/Railway/BookTicketPage.java
- PageObject.Railway.BookTicketPage
-PageObject/Railway/TicketPricePage.java
- PageObject.Railway.TicketPricePage
-PageObject/Railway/RegisterPage.java
- PageObject.Railway.RegisterPage
-PageObject/Railway/TrainPriceListPage.java
- PageObject.Railway.TrainPriceListPage
-PageObject/Railway/MyTicketPage.java
- PageObject.Railway.MyTicketPage
-PageObject/Railway/ChangePasswordPage.java
- PageObject.Railway.ChangePasswordPage
-PageObject/Railway/ForgotPasswordPage.java
- PageObject.Railway.ForgotPasswordPage
-PageObject/Railway/TimeTablePage.java
- PageObject.Railway.TimeTablePage
-PageObject/Railway/GeneralPage.java
- PageObject.Railway.GeneralPage
+TestCases/Railway/TC06_HomePageTest.java
+ TestCases.Railway.TC06_HomePageTest
+TestCases/Railway/TC11_CreateANewAccount.java
+ TestCases.Railway.TC11_CreateANewAccount
+TestCases/Railway/TC16_DeleteTicketTest.java
+ TestCases.Railway.TC16_DeleteTicketTest
+TestCases/Railway/TC13_ChangePasswordTest.java
+ TestCases.Railway.TC13_ChangePasswordTest
+TestCases/Railway/TC14_BookTicketTest.java
+ TestCases.Railway.TC14_BookTicketTest
+TestCases/Railway/TC05_LoginTest.java
+ TestCases.Railway.TC05_LoginTest
+TestCases/Railway/TC10_CreateANewAccount.java
+ TestCases.Railway.TC10_CreateANewAccount
+TestCases/Railway/BaseTest.java
+ TestCases.Railway.BaseTest
+TestCases/Railway/TC03_LoginTest.java
+ TestCases.Railway.TC03_LoginTest
+Common/Constant.java
+ Common.Constant
+TestCases/Railway/TC12_ForgotPasswordTest.java
+ TestCases.Railway.TC12_ForgotPasswordTest
+Common/Utils.java
+ Common.Utils
 TestCases/Railway/TC09_ChangePasswordTest.java
  TestCases.Railway.TC09_ChangePasswordTest
 TestCases/Railway/TC07_CreateANewAccount.java
  TestCases.Railway.TC07_CreateANewAccount
 TestCases/Railway/TC02_LoginTest.java
  TestCases.Railway.TC02_LoginTest
-TestCases/Railway/TC04_LoginTest.java
- TestCases.Railway.TC04_LoginTest
 TestCases/Railway/TC08_LoginTest.java
  TestCases.Railway.TC08_LoginTest
-TestCases/Railway/TC14_BookTicketTest.java
- TestCases.Railway.TC14_BookTicketTest
+PageObject/Railway/RegisterPage.java
+ PageObject.Railway.RegisterPage
+PageObject/Railway/BookTicketPage.java
+ PageObject.Railway.BookTicketPage
+PageObject/Railway/TimeTablePage.java
+ PageObject.Railway.TimeTablePage
+PageObject/Railway/TrainPriceListPage.java
+ PageObject.Railway.TrainPriceListPage
+PageObject/Railway/GeneralPage.java
+ PageObject.Railway.GeneralPage
+PageObject/Railway/LoginPage.java
+ PageObject.Railway.LoginPage
+PageObject/Railway/ForgotPasswordPage.java
+ PageObject.Railway.ForgotPasswordPage
+PageObject/Railway/TicketPricePage.java
+ PageObject.Railway.TicketPricePage
+PageObject/Railway/HomePage.java
+ PageObject.Railway.HomePage
+PageObject/Railway/ContactPage.java
+ PageObject.Railway.ContactPage
+PageObject/Railway/MyTicketPage.java
+ PageObject.Railway.MyTicketPage
+PageObject/Railway/ChangePasswordPage.java
+ PageObject.Railway.ChangePasswordPage
 TestCases/Railway/TC01_LoginTest.java
  TestCases.Railway.TC01_LoginTest
-TestCases/Railway/BaseTest.java
- TestCases.Railway.BaseTest
-TestCases/Railway/TC15_BookTicketFromTimeTable.java
- TestCases.Railway.TC15_BookTicketFromTimeTable
-TestCases/Railway/TC12_ForgotPasswordTest.java
- TestCases.Railway.TC12_ForgotPasswordTest
-TestCases/Railway/TC10_CreateANewAccount.java
- TestCases.Railway.TC10_CreateANewAccount
-TestCases/Railway/TC03_LoginTest.java
- TestCases.Railway.TC03_LoginTest
-TestCases/Railway/TC13_ChangePasswordTest.java
- TestCases.Railway.TC13_ChangePasswordTest
-TestCases/Railway/TC05_LoginTest.java
- TestCases.Railway.TC05_LoginTest
-TestCases/Railway/TC11_CreateANewAccount.java
- TestCases.Railway.TC11_CreateANewAccount
-TestCases/Railway/TC16_DeleteTicketTest.java
- TestCases.Railway.TC16_DeleteTicketTest
-TestCases/Railway/TC06_HomePageTest.java
- TestCases.Railway.TC06_HomePageTest

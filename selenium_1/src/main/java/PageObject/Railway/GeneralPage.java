@@ -83,6 +83,11 @@ public class GeneralPage {
         return this.getLbWelcome().getText();
     }
 
+    public void gotoTabLogout() {
+         this.getTabLogout().click();
+
+    }
+
     public String getErrorMessage() {
         return this.getLbErrorMessage().getText();
     }
