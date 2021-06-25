@@ -6,16 +6,16 @@
 <!--    <parameter name="browser" value="Edge" />-->
     <test verbose="2" preserve-order="true" name="D:/Selenium1/selenium_1">
         <classes>
-            <class name="TestCases.Railway.TC01_LoginTest">
-                <methods>
-                    <include name="TC01"/>
-                </methods>
-            </class>
-<!--            <class name="TestCases.Railway.TC02_LoginTest">-->
+<!--            <class name="TestCases.Railway.TC01_LoginTest">-->
 <!--                <methods>-->
-<!--                    <include name="TC02"/>-->
+<!--                    <include name="TC01"/>-->
 <!--                </methods>-->
 <!--            </class>-->
+            <class name="TestCases.Railway.TC02_LoginTest">
+                <methods>
+                    <include name="TC02"/>
+                </methods>
+            </class>
 <!--            <class name="TestCases.Railway.TC03_LoginTest">-->
 <!--                <methods>-->
 <!--                    <include name="TC03"/>-->

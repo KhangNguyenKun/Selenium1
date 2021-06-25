@@ -18,16 +18,12 @@ public class TC01_LoginTest extends BaseTest{
     public void TC01() throws IOException, ParseException {
         test = extent.createTest("TC01", "User can log into Railway with valid username and password");
         Iterator login = Utils.readJSON();
-        String username = "";
-        System.out.println("login : "+login);
         ArrayList<String> list = new ArrayList<>();
         while (login.hasNext()) {
             Iterator<Map.Entry> login1 = ((Map) login.next()).entrySet().iterator();
             String str;
-
             while ( login1.hasNext()) {
                 Map.Entry pair = login1.next();
-                System.out.println(pair.getKey() + " : " + pair.getValue());
                 str = (String) pair.getValue();
                 list.add(str);
             }

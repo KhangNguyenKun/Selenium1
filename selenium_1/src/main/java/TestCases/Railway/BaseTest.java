@@ -5,8 +5,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.relevantcodes.extentreports.DisplayOrder;
-import com.relevantcodes.extentreports.NetworkMode;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -15,22 +13,23 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-
-import java.io.File;
 import java.io.IOException;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class BaseTest {
-//    static ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./Reports/extent.html");
-    static ExtentReports extent = new ExtentReports();
+    static ExtentHtmlReporter htmlReporter;
+    static ExtentReports extent;
     static ExtentTest test;
 
     @BeforeSuite
     public void extentReport(){
-        Date date = new Date();
-        String filePath = "./Reports/extent.html";
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(filePath);
-//        ExtentReports extent = new ExtentReports();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd-HH_mm_ss");
+        LocalDateTime now = LocalDateTime.now();
+        String filePath = System.getProperty("user.dir") + "/Reports/" + dtf.format(now) + "_extent.html";
+//        File file = new File(filePath);
+        htmlReporter = new ExtentHtmlReporter(filePath);
+        extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
 
